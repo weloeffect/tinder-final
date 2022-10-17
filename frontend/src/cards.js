@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import TinderCard from "react-tinder-card"
 import "./cards.css"
 import axios from "./axios"
-function cards() {
+function Cards() {
     const [people, setPeople] = useState([]);
     useEffect(() => {
        async function fetchData(){
@@ -40,4 +40,4 @@ function cards() {
   )
 }
 
-export default cards
+export default Cards
