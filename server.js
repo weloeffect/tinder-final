@@ -37,4 +37,12 @@ app.use('/cards', cardRouter);
 
 //Listener 
 
-app.listen(port, () => console.log(`listening on localhost:${port}`));
+if (process.env.NODE_ENV === 'production'){
+    app.use(express.static('staff-frontend/build'))
+    app.get('*', (req, res) =>{
+        res.sendFile(path.resolve(__dirname, 'staff-frontend', 'build', 'index.html'))
+    })
+}
+app.listen(port, () => {
+    console.log(`Server is running on port: ${port}`)
+})
