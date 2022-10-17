@@ -6,7 +6,7 @@ function Cards() {
     const [people, setPeople] = useState([]);
     useEffect(() => {
        async function fetchData(){
-        const req = await axios.get('tinder/cards')
+        const req = await axios.get('cards/view')
         setPeople(req.data)
        } 
        fetchData();

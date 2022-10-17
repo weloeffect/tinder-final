@@ -1,6 +1,6 @@
 import './App.css';
 import Header from "./Header"
-import Card from "./cards"
+import Card from "./Cards"
 import Swipe from "./Swipe"
 
 function App() {
